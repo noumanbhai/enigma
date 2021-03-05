@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Product_category;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProductCategoryFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Product_category::class;
+    protected $model = Category::class;
 
     /**
      * Define the model's default state.

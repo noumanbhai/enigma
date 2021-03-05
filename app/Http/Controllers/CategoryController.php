@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product_category;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class ProductCategoryController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories=Category::all();
+        return view('admin.category.index',compact('categories'));
     }
 
     /**
@@ -41,10 +42,10 @@ class ProductCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product_category  $product_category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Product_category $product_category)
+    public function show(Category $category)
     {
         //
     }
@@ -52,10 +53,10 @@ class ProductCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product_category  $product_category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product_category $product_category)
+    public function edit(Category $category)
     {
         //
     }
@@ -64,10 +65,10 @@ class ProductCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product_category  $product_category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product_category $product_category)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -75,10 +76,10 @@ class ProductCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product_category  $product_category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product_category $product_category)
+    public function destroy(Category $category)
     {
         //
     }
